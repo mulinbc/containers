@@ -20,3 +20,5 @@ RUN dnf update -y && \
 COPY sshd-entrypoint.sh /usr/local/bin/
 
 ENTRYPOINT [ "sshd-entrypoint.sh" ]
+
+CMD [ "/usr/sbin/sshd", "-D" ]

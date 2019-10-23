@@ -9,4 +9,4 @@ if [ ! -z "${ROOT_PASSWORD}" ] && [ "${ROOT_PASSWORD}" != "admin" ]; then
     echo "root:${ROOT_PASSWORD}" | chpasswd
 fi
 
-/usr/sbin/sshd -D
+exec "$@"
